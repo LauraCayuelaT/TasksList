@@ -1,0 +1,22 @@
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    margin-top: 10px;
+    
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top:100px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+    place-items: center;
+}

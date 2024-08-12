@@ -1,0 +1,22 @@
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+
+.logOut {
+    display:flex;
+    justify-content: end;
+    margin-top: 30px
+}
+
+.contenidoTaks{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:auto;
+    gap:10px;
+}
+
