@@ -15,7 +15,7 @@ function App() {
   const [user] = useAuthState(auth);
 
   useEffect(() => {
-    if (!user) {
+    if (!user && window.location.pathname !== '/register') {
       navigate('/login');
     }
   }, [user, navigate]);

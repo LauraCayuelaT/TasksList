@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "./../../firebase"; // Asegúrate de que `auth` está importado desde firebase.js
+import { auth } from "./../../firebase"; 
 import { useNavigate } from "react-router-dom";
+import { Button, TextField } from "@mui/material";
+import style from "./Register.module.css"
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -21,22 +23,22 @@ const Register = () => {
   };
 
   return (
-    <div>
-      <h1>Registro</h1>
-      <form onSubmit={handleRegister}>
-        <input
+    <div className={style.container}>
+      <h3>Registro</h3>
+      <form onSubmit={handleRegister} className={style.form}>
+      <TextField id="outlined-basic" label="correo" variant="outlined" 
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Correo electrónico"
         />
-        <input
+        <TextField id="outlined-basic" label="contraseña" variant="outlined" 
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Contraseña"
         />
-        <button type="submit">Registrar</button>
+        <Button variant="outlined" type="submit">Registrar</Button>
       </form>
       {error && <p>{error}</p>}
     </div>
