@@ -14,7 +14,7 @@ const Login = ()=>{
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    try {
+    try { 
       await signInWithEmailAndPassword(auth, email, password);
       alert("Usuario logueado");
       navigate("/home")
@@ -30,13 +30,13 @@ const Login = ()=>{
       <div className={style.divContainer}>
       <h3>Task App</h3>
       <form onSubmit={handleLogin} className={style.container}>
-        <TextField id="outlined-basic" label="correo" variant="outlined" 
+        <TextField id="email-input" label="correo" variant="outlined" 
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Correo electrónico"
         />
-         <TextField id="outlined-basic" label="contraseña" variant="outlined" 
+         <TextField id="password-input" label="contraseña" variant="outlined" 
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}

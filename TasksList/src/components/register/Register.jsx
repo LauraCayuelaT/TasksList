@@ -26,13 +26,13 @@ const Register = () => {
     <div className={style.container}>
       <h3>Registro</h3>
       <form onSubmit={handleRegister} className={style.form}>
-      <TextField id="outlined-basic" label="correo" variant="outlined" 
+      <TextField id="email-input" label="correo" variant="outlined" 
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Correo electrónico"
         />
-        <TextField id="outlined-basic" label="contraseña" variant="outlined" 
+        <TextField id="password-input" label="contraseña" variant="outlined" 
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
