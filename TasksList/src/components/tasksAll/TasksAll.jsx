@@ -45,7 +45,9 @@ const TasksAll = ()=>{
             </TableRow>
           </TableHead>
           <TableBody>
-            {currentTasks?.map((row) => {
+            {
+            currentTasks.length>0 ? 
+            currentTasks?.map((row) => {
                 return (
               <TableRow
                 key={row.id}
@@ -67,7 +69,7 @@ const TasksAll = ()=>{
                 <DeleteIcon onClick={()=>handleDelete(row.id)} style={{cursor:'pointer'}}/>
                 </TableCell>
               </TableRow>)
-            })}
+            }): <strong style={{fontSize:'25px', marginLeft:'10px'}}>No hay tareas pendientes!</strong>}
           </TableBody>
         </Table>
       </TableContainer>
