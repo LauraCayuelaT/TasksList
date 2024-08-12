@@ -28,7 +28,7 @@ const TaskList = ()=>{
     return(
         <div className={style.contenedor} >
         <div className={style.logOut}> 
-        <Button var iant='outlined' onClick={handleLogout}>Cerrar sesión</Button>
+        <Button variant='outlined' onClick={handleLogout}>Cerrar sesión</Button>
         </div>
         <div className={style.contenidoTaks}> 
         <Button variant='outlined'  onClick={handleClick}>Nueva Tarea</Button>

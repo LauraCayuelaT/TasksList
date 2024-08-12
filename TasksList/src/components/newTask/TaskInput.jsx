@@ -12,7 +12,7 @@ const TaskInput = ()=>{
     const navigate =  useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(addTask({ id: Date.now(), task, description }));
+        dispatch(addTask({task, description, completed:false }));
         setTask("");
         setDescription("");
         alert("Tarea correctamente creada")

@@ -7,6 +7,7 @@ import TaskList from './components/taskList/TaskList';
 import Register from './components/register/Register';
 import { auth } from './firebase';
 import TaskInput from './components/newTask/TaskInput';
+import EditTask from './components/editTask/EditTask';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
       <Route path="/register" element={<Register/>}/>
       {user && <Route path="/home" element={<TaskList/>}/> }
       {user && <Route path="/newTask" element={<TaskInput/>}/>}
+      {user && <Route path="/:id" element={<EditTask/>}/>}
       
     </Routes>
   )
