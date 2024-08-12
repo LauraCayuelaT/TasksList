@@ -10,13 +10,11 @@ import TasksAll from "../tasksAll/TasksAll";
 const TaskList = ()=>{
     const navigate = useNavigate()
     
-
-
-
     const handleLogout = async () => {
         try {
           await signOut(auth);
-          console.log("Usuario deslogueado");
+          navigate('/')
+          alert("Usuario deslogueado");
         } catch (error) {
           console.error("Error al desloguearse: ", error);
         }
